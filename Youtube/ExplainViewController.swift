@@ -23,12 +23,14 @@ class ExplainViewController: UIViewController {
           .responseDecodable(of: YoutuberModel.self) { (response) in
             guard let icerik = response.value else { return }
               self.icerikler = icerik.data
-              
+              self.titleText.text = self.selectedTitle
+              self.commentText.text = self.selectedComment
     }
     
     }
     
     @objc func getData() {
+        
         
     }
     
