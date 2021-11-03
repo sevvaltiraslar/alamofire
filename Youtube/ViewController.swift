@@ -12,8 +12,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    
     
     @IBOutlet weak var tableView: UITableView!
-    var titleArray: [[String: Any]] = [[String: Any]]()
     var icerikler: [Ders] = []
+    var sTitle = [String]()
+    var sComment = [String]()
+    var chosenTitle = ""
+    var chosenComment = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -24,6 +27,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let icerik = response.value else { return }
               self.icerikler = icerik.data
               self.tableView.reloadData()
+              
+              
           }
         
         
@@ -34,23 +39,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! tittleCell
-        if self.titleArray.count > 0 {
-            let eachTitle = self.titleArray[indexPath.row]
-            cell.tittleLabel.text = (eachTitle["baslik"] as? String) ?? ""
-            cell.imageView?.image = (eachTitle["image"] as! UIImage)
-        }*/
         let cell = UITableViewCell()
         cell.textLabel?.text = icerikler[indexPath.row].baslik
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = icerikler[indexPath.row]
         
+        chosenTitle = icerikler[indexPath.row].baslik
+        chosenComment = icerikler[indexPath.row].icerik
+        performSegue(withIdentifier: "toExplain", sender: nil)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toExplain"{
+            let destinationVC = segue.destination as! ExplainViewController
+            destinationVC.selectedTitle = chosenTitle
+            destinationVC.selectedComment = chosenComment
+        }
 
 }
 
+}

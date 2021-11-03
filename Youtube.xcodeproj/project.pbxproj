@@ -14,7 +14,8 @@
 		5A2F0B75272A919000F548BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F0B73272A919000F548BF /* Main.storyboard */; };
 		5A2F0B77272A919200F548BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F0B76272A919200F548BF /* Assets.xcassets */; };
 		5A2F0B7A272A919200F548BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F0B78272A919200F548BF /* LaunchScreen.storyboard */; };
-		5A494ED2272A934C00F98C51 /* tittleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A494ED1272A934C00F98C51 /* tittleCell.swift */; };
+		5A7D62122732E4D90099D02E /* Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D62112732E4D90099D02E /* Extencion.swift */; };
+		5A7D62142732E63A0099D02E /* ExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D62132732E63A0099D02E /* ExplainViewController.swift */; };
 		5A9871F1272FD97F005D1D7E /* YoutubeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9871F0272FD97F005D1D7E /* YoutubeModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +30,8 @@
 		5A2F0B76272A919200F548BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2F0B79272A919200F548BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A2F0B7B272A919200F548BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A494ED1272A934C00F98C51 /* tittleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tittleCell.swift; sourceTree = "<group>"; };
+		5A7D62112732E4D90099D02E /* Extencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extencion.swift; sourceTree = "<group>"; };
+		5A7D62132732E63A0099D02E /* ExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainViewController.swift; sourceTree = "<group>"; };
 		5A9871F0272FD97F005D1D7E /* YoutubeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeModel.swift; sourceTree = "<group>"; };
 		6E9C0A74C5E65D9EA6BFD9E9 /* Pods-Youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.debug.xcconfig"; path = "Target Support Files/Pods-Youtube/Pods-Youtube.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,10 +78,11 @@
 		5A2F0B6C272A919000F548BF /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				5A7D620E2732E48B0099D02E /* Extension */,
 				5A2F0B6D272A919000F548BF /* AppDelegate.swift */,
 				5A2F0B6F272A919000F548BF /* SceneDelegate.swift */,
 				5A2F0B71272A919000F548BF /* ViewController.swift */,
-				5A494ED1272A934C00F98C51 /* tittleCell.swift */,
+				5A7D62132732E63A0099D02E /* ExplainViewController.swift */,
 				5A2F0B73272A919000F548BF /* Main.storyboard */,
 				5A2F0B76272A919200F548BF /* Assets.xcassets */,
 				5A2F0B78272A919200F548BF /* LaunchScreen.storyboard */,
@@ -87,6 +90,14 @@
 				5A9871F0272FD97F005D1D7E /* YoutubeModel.swift */,
 			);
 			path = Youtube;
+			sourceTree = "<group>";
+		};
+		5A7D620E2732E48B0099D02E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5A7D62112732E4D90099D02E /* Extencion.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C25764521C6D8515A0462C90 /* Frameworks */ = {
@@ -213,9 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2F0B72272A919000F548BF /* ViewController.swift in Sources */,
-				5A494ED2272A934C00F98C51 /* tittleCell.swift in Sources */,
+				5A7D62122732E4D90099D02E /* Extencion.swift in Sources */,
 				5A2F0B6E272A919000F548BF /* AppDelegate.swift in Sources */,
 				5A9871F1272FD97F005D1D7E /* YoutubeModel.swift in Sources */,
+				5A7D62142732E63A0099D02E /* ExplainViewController.swift in Sources */,
 				5A2F0B70272A919000F548BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
