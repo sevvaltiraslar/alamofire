@@ -24,8 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         AF.request("https://apps.furkansandal.com/youtuber_app_v1/show_json.php")
           .validate()
           .responseDecodable(of: YoutuberModel.self) { (response) in
-            guard let icerik = response.value else { return }
-              self.icerikler = icerik.data
+            guard let yorum = response.value else { return }
+              self.icerikler = yorum.data
               self.tableView.reloadData()
               
               
